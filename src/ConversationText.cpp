@@ -18,6 +18,7 @@ ConversationText::ConversationText(float _x, float _y, float _w, float _h)
     verdana30.loadFont("verdana.ttf", 30, true, true);
 	verdana30.setLineHeight(34.0f);
 	verdana30.setLetterSpacing(1.035);
+    verdana30.setEncoding(OF_ENCODING_UTF8);
     
     textIndex = 0;
     timestamp = ofGetUnixTime();
@@ -85,7 +86,7 @@ void ConversationText::threadedFunction() {
                 system(cmd.c_str());
         #endif
         #ifdef TARGET_LINUX_ARM
-                string cmd = "echo "+current_tag+" | espeak";   // create the command
+                string cmd = "echo "+current_tag+" | espeak -v french -s 140";   // create the command
                 system(cmd.c_str());
         #endif
         

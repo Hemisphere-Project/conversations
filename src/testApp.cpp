@@ -9,7 +9,7 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-    //soundPlayer->update();
+    soundPlayer->update();
     text->update();
 }
 

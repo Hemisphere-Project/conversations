@@ -12,6 +12,8 @@
 #include "ofMain.h"
 #include "ofURLFileLoader.h"
 
+#define SOUND_RELOAD_PERIOD 30 // in sec
+
 class ConversationSoundPlayer{
     
 public:
@@ -31,7 +33,10 @@ public:
     float w;
     float h;
     
-     ofSoundPlayer  sound;
+    unsigned int timestamp;
+    
+    ofSoundPlayer  sound1;
+    ofSoundPlayer  sound2;
     
 private:
     
